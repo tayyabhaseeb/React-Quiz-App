@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #f5f7fb;
+  color: #293264;
+  font-family: "Karla", sans-serif;
+  background: #43c6ac; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f8ffae,
+    #43c6ac
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f8ffae,
+    #43c6ac
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.start-page {
+  margin-top: 20%;
+  margin-left: 33%;
+  margin-right: 33%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.start-page-description > .heading {
+  margin-left: 33%;
+}
+
+.start-page-description > .para {
+  margin-left: 29%;
+}
+
+.start-page-button-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.start-button {
+  background-color: #4d5b9e;
+  color: #f5f7fb;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  border-radius: 15px;
+  width: 190px;
+  height: 50px;
+  border: 0;
+  cursor: pointer;
+  z-index: 100;
+  margin-left: 33px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.start-button :active {
+  box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.75) inset;
+}
+
+.heading {
+  font-size: 41px;
+  margin-bottom: 7px;
+  font-family: "karla";
+  font-weight: 700;
+}
+
+.para {
+  font-family: "karla";
+  font-size: 19px;
+  font-weight: 400;
+  margin-bottom: 29px;
 }

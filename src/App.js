@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Quiz from "./components/Quiz";
+import React, { useState } from "react";
+import First from "./components/First";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  /////////////////////////////////////////
+
+  // state declaring area
+  const [start, setStart] = useState(true);
+  /////////////////////////////////////////////
+  //  functions
+  function startGame() {
+    setStart((prevState) => !prevState);
+    console.log(start);
+  }
+  ////////////////////////////////////
+
+  return <div>{start ? <Quiz startGame={startGame} /> : <First />}</div>;
 }
 
 export default App;
