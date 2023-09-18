@@ -1,22 +1,27 @@
-import "./App.css";
-import Quiz from "./components/Quiz";
 import React, { useState } from "react";
-import First from "./components/First";
+import StartQuiz from "./components/StartQuiz";
+import Quiz from "./components/Quiz";
 
-function App() {
-  /////////////////////////////////////////
+export default function App() {
+  const [start, setStart] = useState(false);
 
-  // state declaring area
-  const [start, setStart] = useState(true);
-  /////////////////////////////////////////////
-  //  functions
-  function startGame() {
-    setStart((prevState) => !prevState);
-    console.log(start);
+  function handleClick() {
+    // setStart(true)
+    console.log("Hello World");
+    setStart(true);
   }
-  ////////////////////////////////////
 
-  return <div>{start ? <Quiz startGame={startGame} /> : <First />}</div>;
+  function restart() {
+    setStart(false);
+  }
+
+  return (
+    <div className="app-container">
+      {start === false ? (
+        <StartQuiz handleClick={handleClick} />
+      ) : (
+        <Quiz restart={restart} />
+      )}
+    </div>
+  );
 }
-
-export default App;
